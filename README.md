@@ -101,4 +101,4 @@ gulp.task('imagemin',function(){
 gulp.task('default',['compress','minifycss','minifyhtml','imagemin']);
 ```
 ###7.执行
- 敲入命令`gulp`，此时压缩后的文件就存在于dist文件夹里；`gulp 任务名`可以单独的执行某个任务
+ 敲入命令`gulp`，此时压缩后的文件就存在于dist文件夹里；`gulp 任务名`可以单独的执行某个任务。
