@@ -3,22 +3,22 @@
 ###1.安装node.js
 [node.js下载官网](https://nodejs.org/en/)
 ###2.使用命令行
-2.1 可以在windows系统下的命令提示符cmd（window+R，回车）中操作，也可在安装好的git的git bash中操作。
-2.2 常用命令：
-`node -v`查看安装的node.js版本，如能显示版本号，说明安装成功；
-`npm -v`查看npm版本号，npm在安装node.js时一同安装的包管理器；
-`cd`定位到目录，用法:cd+路径；
-`dir`列出文件列表；
-`cls`清空命令提示符窗口内容。
+2.1 可以在windows系统下的命令提示符cmd（window+R，回车）中操作，也可在安装好的git的git bash中操作。<br>
+2.2 常用命令：<br>
+       `node -v`查看安装的node.js版本，如能显示版本号，说明安装成功；<br>
+       `npm -v`查看npm版本号，npm在安装node.js时一同安装的包管理器；<br>
+       `cd`定位到目录，用法:cd+路径；<br>
+       `dir`列出文件列表；<br>
+       `cls`清空命令提示符窗口内容。<br>
 ###3.npm介绍
-3.1、说明：npm（node package manager）nodejs的包管理器，用于node插件管理（包括安装、卸载、管理依赖等）；
-3.2、输入命令行`npm init`，就可以在项目根目录中自动生成配置文件 `package.json`。
-          <span style='color:red;'> PS：</span> 为什么要保存至package.json？因为node插件包相对来说非常庞大，所以不加入版本管理，将配置信息写入package.json并将其加入版本管理，其他开发者对应下载即可（命令提示符执行`npm install`，则会根据package.json下载所有需要的包，`npm install --production`只下载dependencies节点的包）。
+3.1、说明：npm（node package manager）nodejs的包管理器，用于node插件管理（包括安装、卸载、管理依赖等）；<br>
+3.2、输入命令行`npm init`，就可以在项目根目录中自动生成配置文件 `package.json`。<br>
+          <span style='color:red;'> PS：</span><br> 为什么要保存至package.json？因为node插件包相对来说非常庞大，所以不加入版本管理，将配置信息写入package.json并将其加入版本管理，其他开发者对应下载即可（命令提示符执行`npm install`，则会根据package.json下载所有需要的包，`npm install --production`只下载dependencies节点的包）。<br>
  
 <span style='color:red;'> 注意：</span>如若再npm下载插件过程中下载缓慢或出现异常，可选装国内淘宝团队的cnpm来代替npm（http://npm.taobao.org），安装命令为`npm install cnpm -g --registry=https://registry.npm.taobao.org`。
 ###4.安装gulp
-  4.1 全局安装：`npm install -g gulp`。可用`gulp -v`查看版本号确认是否安装成功。
-  4.2 本地安装：`npm install --save-dev gulp`
+  4.1 全局安装：`npm install -g gulp`。可用`gulp -v`查看版本号确认是否安装成功。<br>
+  4.2 本地安装：`npm install --save-dev gulp`<br>
  <span style='color:red;'>  PS：</span>我们全局安装了gulp，项目也安装了gulp，全局安装gulp是为了执行gulp任务，本地安装gulp则是为了调用gulp插件的功能。
 
 ###5.安装依赖（插件）
@@ -35,20 +35,20 @@
             更改提醒                                              （gulp-notify）
             清除文件                                               （del）
 
- 插件安装：`npm install gulp-jshint gulp-sass gulp-concat gulp-uglify gulp-rename --save-dev`
- 插件卸载：`npm uninstall <name> [-g] [--save-dev]`     PS：不要直接删除本地插件包
-卸载全部插件：` npm uninstall gulp-less gulp-uglify gulp-concat`     ……???太麻烦
- 使用npm更新插件：`npm update <name> [-g] [--save-dev]`
-更新全部插件：`npm update [--save-dev]`
- 当前目录已安装插件：`npm list`
+ 插件安装：`npm install gulp-jshint gulp-sass gulp-concat gulp-uglify gulp-rename --save-dev` <br>
+ 插件卸载：`npm uninstall <name> [-g] [--save-dev]`     PS：不要直接删除本地插件包<br>
+卸载全部插件：` npm uninstall gulp-less gulp-uglify gulp-concat`     ……???太麻烦<br>
+ 使用npm更新插件：`npm update <name> [-g] [--save-dev]`<br>
+更新全部插件：`npm update [--save-dev]`<br>
+ 当前目录已安装插件：`npm list`<br>
 
- <span style='color:red;'>  PS：</span>
+ <span style='color:red;'>  PS：</span><br>
  * 安装js代码校验插件jshint时，安装命令并不是`npm install --save-dev gulp-jshint`，而是`npm install --save-dev jshint gulp-jshint`。
  * 当你为你的模块安装一个依赖模块(插件)时，正常情况下你得先安装他们（在模块根目录下 `npm install module-name`），然后连同版本号手动将他们添加到模块配置文件package.json中的依赖里（`dependencies`）。
  &nbsp;
-   `-save`和`save-dev` 可以省掉你手动修改package.json文件的步骤。
-   `npm install module-name -save`  自动把模块和版本号添加到dependencies部分
-   `npm install module-name -save-dve`  自动把模块和版本号添加到devdependencies部分
+   `-save`和`save-dev` 可以省掉你手动修改package.json文件的步骤。<br>
+   `npm install module-name -save`  自动把模块和版本号添加到dependencies部分<br>
+   `npm install module-name -save-dve`  自动把模块和版本号添加到devdependencies部分<br>
 
 ###6.构建项目
 在项目根目录下新建一个`gulpfile.js`文件，黏贴以下代码
