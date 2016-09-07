@@ -1,18 +1,18 @@
 #一、gulp安装构建
 ***
 ###1.安装node.js
-   [node.js下载官网](https://nodejs.org/en/)
+[node.js下载官网](https://nodejs.org/en/)
 ###2.使用命令行
-   2.1 可以在windows系统下的命令提示符cmd（window+R，回车）中操作，也可在安装好的git的git bash中操作。
-   2.2 常用命令：
-        `node -v`查看安装的node.js版本，如能显示版本号，说明安装成功；
-        `npm -v`查看npm版本号，npm在安装node.js时一同安装的包管理器；
-        `cd`定位到目录，用法:cd+路径；
-        `dir`列出文件列表；
-        `cls`清空命令提示符窗口内容。
+2.1 可以在windows系统下的命令提示符cmd（window+R，回车）中操作，也可在安装好的git的git bash中操作。
+2.2 常用命令：
+`node -v`查看安装的node.js版本，如能显示版本号，说明安装成功；
+`npm -v`查看npm版本号，npm在安装node.js时一同安装的包管理器；
+`cd`定位到目录，用法:cd+路径；
+`dir`列出文件列表；
+`cls`清空命令提示符窗口内容。
 ###3.npm介绍
-   3.1、说明：npm（node package manager）nodejs的包管理器，用于node插件管理（包括安装、卸载、管理依赖等）；
-   3.2、输入命令行`npm init`，就可以在项目根目录中自动生成配置文件 `package.json`。
+3.1、说明：npm（node package manager）nodejs的包管理器，用于node插件管理（包括安装、卸载、管理依赖等）；
+3.2、输入命令行`npm init`，就可以在项目根目录中自动生成配置文件 `package.json`。
           <span style='color:red;'> PS：</span> 为什么要保存至package.json？因为node插件包相对来说非常庞大，所以不加入版本管理，将配置信息写入package.json并将其加入版本管理，其他开发者对应下载即可（命令提示符执行`npm install`，则会根据package.json下载所有需要的包，`npm install --production`只下载dependencies节点的包）。
  
 <span style='color:red;'> 注意：</span>如若再npm下载插件过程中下载缓慢或出现异常，可选装国内淘宝团队的cnpm来代替npm（http://npm.taobao.org），安装命令为`npm install cnpm -g --registry=https://registry.npm.taobao.org`。
